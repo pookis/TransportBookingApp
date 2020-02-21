@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
-    flex: 1
+    marginTop: 100,
+    backgroundColor: "#777"
   }
 })
