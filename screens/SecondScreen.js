@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 100,
-    backgroundColor: "#777"
+    marginTop: 100
   }
 })

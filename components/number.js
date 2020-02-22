@@ -30,18 +30,12 @@ const styles = StyleSheet.create({
     height: 40
   },
   textInput: {
-    top: 7,
-    left: 4,
-    width: 33,
-    height: 29,
-    color: "#121212",
     position: "absolute",
-    fontSize: 22,
-    lineHeight: 0,
-    textAlign: "center"
+    fontSize: 16
   },
   container: {
     margin: 3,
-    position: "relative"
+    alignItems: "center",
+    justifyContent: "center"
   }
 })
