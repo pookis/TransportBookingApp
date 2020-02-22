@@ -34,11 +34,11 @@ export default class Db extends Component {
   }
 
   dates1 = () => {
-    return this.state.dates1.map(item => <Number nr={item} />)
+    return this.state.dates1.map(nr => <Number nr={nr} key={nr} />)
   }
 
   dates2 = () => {
-    return this.state.dates2.map(item => <Number nr={item} />)
+    return this.state.dates2.map(nr => <Number nr={nr} key={nr} />)
   }
 
   render() {

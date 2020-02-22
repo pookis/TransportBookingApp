@@ -4,7 +4,7 @@ import Svg, { Ellipse } from "react-native-svg"
 
 export default function Number(props) {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} key={props.nr.toString()}>
       <Svg viewBox="0 0 64.00 64.00" style={styles.ellipse}>
         <Ellipse
           strokeWidth={4}
@@ -17,7 +17,9 @@ export default function Number(props) {
         ></Ellipse>
       </Svg>
 
-      <Text style={styles.textInput}>{props.nr}</Text>
+      <Text style={styles.textInput} key={props.nr}>
+        {props.nr}
+      </Text>
     </View>
   )
 }

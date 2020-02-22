@@ -6,9 +6,13 @@ import Number from "../components/number"
 
 export default function SecondScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Db />
-      <Button title="xopne" onPress={() => navigation.navigate("Home")} />
+    <View>
+      <View>
+        <Button title="xopne" onPress={() => navigation.navigate("Home")} />
+      </View>
+      <View style={styles.container}>
+        <Db />
+      </View>
     </View>
   )
 }
