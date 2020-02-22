@@ -2,7 +2,7 @@ import * as React from "react"
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native"
 import Svg, { Ellipse } from "react-native-svg"
 
-function Number(props) {
+export default function Number(props) {
   return (
     <View style={styles.container}>
       <Svg viewBox="0 0 64.00 64.00" style={styles.ellipse}>
@@ -16,6 +16,7 @@ function Number(props) {
           ry={30}
         ></Ellipse>
       </Svg>
+
       <Text style={styles.textInput}>{props.nr}</Text>
     </View>
   )
@@ -42,5 +43,3 @@ const styles = StyleSheet.create({
     position: "relative"
   }
 })
-
-export default Number
