@@ -4,11 +4,17 @@ import { NavigationContainer } from "@react-navigation/native"
 import Db from "../components/db"
 import Number from "../components/number"
 
-export default function SecondScreen({ navigation }) {
+export default function SecondScreen({ route, navigation }) {
+  const { rout } = route.params
+
   return (
     <View>
       <View>
-        <Button title="xopne" onPress={() => navigation.navigate("Home")} />
+        <Text style={styles.caption}>{rout.dest}</Text>
+        <Button
+          title="<- Atgal Pasirinkti marsruta"
+          onPress={() => navigation.navigate("Home")}
+        />
       </View>
       <View style={styles.container}>
         <Db />
@@ -24,5 +30,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 100
+  },
+  caption: {
+    color: "#eeee",
+    fontSize: 19,
+    letterSpacing: 1,
+    textAlign: "center"
   }
 })

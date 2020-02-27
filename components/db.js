@@ -1,6 +1,14 @@
 import React, { Component } from "react"
-import { FlatList, StyleSheet, Text, View, Button } from "react-native"
+import {
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TouchableOpacity
+} from "react-native"
 import Number from "./number"
+import { NavigationContainer, useNavigation } from "@react-navigation/native"
 
 //console.disableYellowBox = true
 
@@ -48,6 +56,7 @@ export default class Db extends Component {
           <Text style={styles.header}>{this.state.month1}</Text>
         </View>
         <View style={styles.container}>{this.dates1()}</View>
+
         <View style={styles.container}>
           <Text style={styles.header}>{this.state.month2}</Text>
         </View>

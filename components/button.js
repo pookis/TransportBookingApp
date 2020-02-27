@@ -4,11 +4,11 @@ import { NavigationContainer, useNavigation } from "@react-navigation/native"
 
 export default function Btn(props) {
   const navigation = useNavigation()
-
+  const dest = props.dest
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => navigation.navigate("Dates")}
+      onPress={() => navigation.navigate("Dates", { rout: { dest } })}
     >
       <Text style={styles.caption}>{props.dest}</Text>
     </TouchableOpacity>

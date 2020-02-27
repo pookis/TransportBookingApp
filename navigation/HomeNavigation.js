@@ -17,6 +17,7 @@ import HomeScreen from "../screens/HomeScreen"
 import { NavigationContainer } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import SecondScreen from "../screens/SecondScreen"
+import FormScreen from "../screens/FormScreen"
 
 const Stack = createStackNavigator()
 
@@ -30,6 +31,7 @@ export default function HomeNavigation() {
     >
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Dates" component={SecondScreen} />
+      <Stack.Screen name="Form" component={FormScreen} />
     </Stack.Navigator>
   )
 }
