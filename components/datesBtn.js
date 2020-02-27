@@ -11,7 +11,7 @@ export default function Number(props) {
     <TouchableOpacity
       style={styles.container}
       key={props.nr.toString()}
-      //Pass on Value dates
+      //Pass on dates
       onPress={() => navigation.navigate("Form", { routes: { nr } })}
     >
       <Svg viewBox="0 0 64.00 64.00" style={styles.ellipse}>

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { StyleSheet, View, Text, Button, TouchableOpacity } from "react-native"
 import { NavigationContainer } from "@react-navigation/native"
 import Db from "../components/db"
-import Number from "../components/number"
+import Number from "../components/datesBtn"
 import Layout from "../constants/Layout"
 import { WebView } from "react-native-webview"
 

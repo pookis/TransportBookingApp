@@ -11,7 +11,6 @@ import {
 
 import { ScrollView } from "react-native-gesture-handler"
 import * as WebBrowser from "expo-web-browser"
-import Btn from "../components/button"
 import HomeScreen from "../screens/HomeScreen"
 
 import { NavigationContainer } from "@react-navigation/native"
