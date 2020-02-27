@@ -15,7 +15,9 @@ export default function FormScreen({ route, navigation }) {
   const height = Dimensions.get("window").height
   return (
     <View>
-      <Text style={styles.caption}>{routes.nr}</Text>
+      <Text style={styles.caption}>
+        {routes.month} {routes.nr} to {routes.dest}
+      </Text>
       <Button
         title="<- Atgal Pasirinkti Datas"
         onPress={() => navigation.navigate("Dates")}

@@ -4,7 +4,12 @@ import { NavigationContainer } from "@react-navigation/native"
 import Db from "../components/db"
 import Number from "../components/datesBtn"
 
-export default function SecondScreen({ route, navigation }) {
+export default function SecondScreen({
+  route,
+  navigation,
+  destination,
+  month
+}) {
   const { rout } = route.params
 
   return (

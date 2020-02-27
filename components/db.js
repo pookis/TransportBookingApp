@@ -10,8 +10,6 @@ import {
 import Number from "./datesBtn"
 import { NavigationContainer, useNavigation } from "@react-navigation/native"
 
-//console.disableYellowBox = true
-
 export default class Db extends Component {
   constructor(props) {
     super(props)
@@ -19,7 +17,13 @@ export default class Db extends Component {
       month1: [],
       month2: [],
       dates1: [],
-      dates2: []
+      dates2: [],
+      aboutUs: [],
+      tc: [],
+      destination1: "LIETUVA - ISPANIJAx",
+      destination2: "ISPANIJA - LIETUVAx",
+      destination3: "AIRIJA - LIETYVAx",
+      destination4: "LIETUVA - AIRIJAx"
     }
   }
 
@@ -31,29 +35,36 @@ export default class Db extends Component {
     const response = await fetch("http://jobabroad.net/wp-json/rpi/content")
     const json = await response.json()
 
-    const { month_1, month_2, days_1, days_2 } = json
+    const { month_1, month_2, days_1, days_2, about_us } = json
 
     this.setState({
       month1: month_1,
       month2: month_2,
       dates1: days_1,
-      dates2: days_2
+      dates2: days_2,
+      aboutUs: about_us
     })
   }
 
   dates1 = () => {
-    return this.state.dates1.map(nr => <Number nr={nr} key={nr} />)
+    return this.state.dates1.map(nr => (
+      <Number nr={nr} key={nr} month={this.state.month1} />
+    ))
   }
 
   dates2 = () => {
-    return this.state.dates2.map(nr => <Number nr={nr} key={nr} />)
+    return this.state.dates2.map(nr => (
+      <Number nr={nr} key={nr} month={this.state.month2} />
+    ))
   }
 
   render() {
     return (
       <View>
         <View style={styles.container}>
-          <Text style={styles.header}>{this.state.month1}</Text>
+          <Text style={styles.header}>
+            {this.state.month1} - {this.state.aboutUs}
+          </Text>
         </View>
         <View style={styles.container}>{this.dates1()}</View>
 
