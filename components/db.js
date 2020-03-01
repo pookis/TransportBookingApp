@@ -41,8 +41,7 @@ export default class Db extends Component {
       month1: month_1,
       month2: month_2,
       dates1: days_1,
-      dates2: days_2,
-      aboutUs: about_us
+      dates2: days_2
     })
   }
 
@@ -62,9 +61,7 @@ export default class Db extends Component {
     return (
       <View>
         <View style={styles.container}>
-          <Text style={styles.header}>
-            {this.state.month1} - {this.state.aboutUs}
-          </Text>
+          <Text style={styles.header}>{this.state.month1}</Text>
         </View>
         <View style={styles.container}>{this.dates1()}</View>
 
