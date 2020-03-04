@@ -47,13 +47,23 @@ export default class Db extends Component {
 
   dates1 = () => {
     return this.state.dates1.map(nr => (
-      <Number nr={nr} key={nr} month={this.state.month1} />
+      <Number
+        nr={nr}
+        key={nr}
+        month={this.state.month1}
+        destination={this.props.dest}
+      />
     ))
   }
 
   dates2 = () => {
     return this.state.dates2.map(nr => (
-      <Number nr={nr} key={nr} month={this.state.month2} />
+      <Number
+        nr={nr}
+        key={nr}
+        month={this.state.month2}
+        destination={this.props.dest}
+      />
     ))
   }
 

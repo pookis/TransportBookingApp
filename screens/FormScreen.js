@@ -14,13 +14,18 @@ export default function FormScreen({ route, navigation }) {
   const width = Dimensions.get("window").width
   const height = Dimensions.get("window").height
   return (
-    <View>
-      <Text style={styles.caption}>
-        {routes.month} {routes.nr} to {routes.dest}
-      </Text>
+    <View style={{ flex: 1 }}>
       <Button
         title="<- Atgal Pasirinkti Datas"
         onPress={() => navigation.navigate("Dates")}
+      />
+      <Text style={styles.caption}>
+        {routes.month} {routes.nr} to {routes.dest}
+      </Text>
+
+      <WebView
+        source={{ uri: "https://adstream.tech/sgp/uzsakymo-forma/" }}
+        style={{ marginTop: 0 }}
       />
     </View>
   )
@@ -28,7 +33,7 @@ export default function FormScreen({ route, navigation }) {
   return {
     /* <WebView
 
-      source={{ uri: "https://jobabroad.net" }}
+      source={{ uri: "https://adstream.tech/sgp/uzsakymo-forma/" }}
       style={{ marginTop: 0 }}
     /> */
 }

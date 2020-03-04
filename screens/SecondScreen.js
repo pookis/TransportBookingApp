@@ -22,7 +22,7 @@ export default function SecondScreen({
         />
       </View>
       <View style={styles.container}>
-        <Db />
+        <Db dest={rout.dest} />
       </View>
     </View>
   )
