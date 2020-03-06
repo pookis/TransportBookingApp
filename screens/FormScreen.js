@@ -15,12 +15,9 @@ export default function FormScreen({ route, navigation }) {
   const height = Dimensions.get("window").height
   return (
     <View style={{ flex: 1 }}>
-      <Button
-        title="<- Atgal Pasirinkti Datas"
-        onPress={() => navigation.navigate("Dates")}
-      />
       <Text style={styles.caption}>
-        {routes.month} {routes.nr} to {routes.dest}
+        {routes.month} {routes.nr} d.
+        <Text style={styles.bold}> {routes.dest}</Text>
       </Text>
 
       <WebView
@@ -48,8 +45,12 @@ const styles = StyleSheet.create({
   },
   caption: {
     color: "#eeee",
-    fontSize: 19,
+    fontSize: 14,
+    margin: 5,
     letterSpacing: 1,
     textAlign: "center"
+  },
+  bold: {
+    fontWeight: "bold"
   }
 })

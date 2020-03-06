@@ -16,10 +16,9 @@ export default function SecondScreen({
     <View>
       <View>
         <Text style={styles.caption}>{rout.dest}</Text>
-        <Button
-          title="<- Atgal Pasirinkti marsruta"
-          onPress={() => navigation.navigate("Home")}
-        />
+        <Text style={styles.title} onPress={() => navigation.navigate("Home")}>
+          Pasirinkite datą:
+        </Text>
       </View>
       <View style={styles.container}>
         <Db dest={rout.dest} />
@@ -34,12 +33,20 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 100
+    marginTop: 40
   },
   caption: {
     color: "#eeee",
-    fontSize: 19,
+    fontSize: 25,
     letterSpacing: 1,
-    textAlign: "center"
+    textAlign: "center",
+    marginTop: 30
+  },
+  title: {
+    color: "#eee",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    marginTop: 4
   }
 })

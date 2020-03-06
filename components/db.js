@@ -73,9 +73,10 @@ export default class Db extends Component {
         <View style={styles.container}>
           <Text style={styles.header}>{this.state.month1}</Text>
         </View>
+
         <View style={styles.container}>{this.dates1()}</View>
 
-        <View style={styles.container}>
+        <View style={styles.container1}>
           <Text style={styles.header}>{this.state.month2}</Text>
         </View>
         <View style={styles.container}>{this.dates2()}</View>
@@ -90,16 +91,25 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 20
+    marginTop: 10
+  },
+  container1: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 50
   },
   header: {
     alignItems: "center",
     justifyContent: "center",
     fontSize: 20,
+    fontWeight: "bold",
     textTransform: "uppercase",
-    color: "#FFFF",
-    backgroundColor: "#444",
-    padding: 5
+    color: "#ccc",
+
+    padding: 2,
+    marginTop: 6
   }
 })
 

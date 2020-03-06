@@ -20,13 +20,13 @@ export default function Number(props) {
     >
       <Svg viewBox="0 0 64.00 64.00" style={styles.ellipse}>
         <Ellipse
-          strokeWidth={4}
-          fill="rgba(175,164,164,1)"
-          stroke="rgba(230, 230, 230,1)"
-          cx={32}
+          strokeWidth={3}
+          stroke="rgba(238,69,58,1)"
+          fill="rgba(230, 230, 230,1)"
+          cx={52}
           cy={32}
-          rx={30}
-          ry={30}
+          rx={50}
+          ry={50}
         ></Ellipse>
       </Svg>
       <Text style={styles.textInput} key={props.nr}>
@@ -38,16 +38,17 @@ export default function Number(props) {
 
 const styles = StyleSheet.create({
   ellipse: {
-    width: 40,
-    height: 40
+    width: 50,
+    height: 50
   },
   textInput: {
     position: "absolute",
-    fontSize: 16
+    fontSize: 24
   },
   container: {
-    margin: 3,
+    margin: 7,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    marginTop: -20
   }
 })
