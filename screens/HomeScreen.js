@@ -9,8 +9,6 @@ import {
   Button
 } from "react-native"
 
-import { ScrollView } from "react-native-gesture-handler"
-import * as WebBrowser from "expo-web-browser"
 import Btn from "../components/destBtn"
 
 export default function HomeScreen({ navigate }) {
